@@ -1,6 +1,6 @@
 # Z Video Generator
 
-[![Download on the Mac App Store](https://txw.ca/samples/mas-badge.svg)](https://apps.apple.com/ca/app/z-video-generator/id6782761951?mt=12) · [txw.ca/zvg](https://txw.ca/zvg)
+[![Download on the Mac App Store](https://txw.ca/mas-badge.svg)](https://apps.apple.com/ca/app/z-video-generator/id6782761951?mt=12) · [txw.ca/zvg](https://txw.ca/zvg)
 
 A native SwiftUI macOS app that turns a text prompt into a video using the
 [Z.AI](https://z.ai) video API. Built for **macOS 26 (Tahoe)** with Apple's
