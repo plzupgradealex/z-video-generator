@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Reference template for a manual Developer-ID export (direct download, not the
+  App Store). The scripts generate this at runtime from $Z_TEAM_ID, so you don't
+  normally edit this file. To use in Xcode directly, replace __TEAM_ID__.
+-->
+<plist version="1.0">
+<dict>
+  <key>method</key><string>developer-id</string>
+  <key>teamID</key><string>__TEAM_ID__</string>
+</dict>
+</plist>

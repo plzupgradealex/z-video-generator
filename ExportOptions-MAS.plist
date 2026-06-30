@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Reference template for a Mac App Store export (produces a .pkg for Transporter).
+  The scripts generate this at runtime from $Z_TEAM_ID. To use in Xcode directly,
+  replace __TEAM_ID__ with your Team ID.
+-->
+<plist version="1.0">
+<dict>
+  <key>method</key><string>app-store</string>
+  <key>teamID</key><string>__TEAM_ID__</string>
+</dict>
+</plist>

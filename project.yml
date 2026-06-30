@@ -1,0 +1,52 @@
+name: ZVideoGenerator
+options:
+  bundleIdPrefix: com.alex
+  deploymentTarget:
+    macOS: "26.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "3"
+    SWIFT_VERSION: "6.0"
+    DEVELOPMENT_TEAM: "ABCD123XYZ"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+    COMBINE_HIDPI_IMAGES: YES
+targets:
+  ZVideoGenerator:
+    type: application
+    platform: macOS
+    deploymentTarget: "26.0"
+    sources:
+      - path: Sources
+      - path: Resources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Z Video Generator
+        CFBundleIconFile: AppIcon
+        CFBundleName: $(PRODUCT_NAME)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSApplicationCategoryType: public.app-category.video
+        NSHumanReadableCopyright: "Copyright © 2026 Alexander Ruppel. All rights reserved."
+        # Never let the system auto-terminate (would interrupt an in-flight render)
+        # or sudden-terminate (would skip a final jobs flush). Quit always runs a
+        # clean shutdown so persisted state is consistent.
+        NSSupportsAutomaticTermination: false
+        NSSupportsSuddenTermination: false
+        # The app only uses exempt encryption (HTTPS + CryptoKit HMAC/SHA256), so
+        # skip the annual export-compliance questionnaire on each upload.
+        ITSAppUsesNonExemptEncryption: false
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.alex.ZVideoGenerator
+        PRODUCT_NAME: ZVideoGenerator
+        CODE_SIGN_ENTITLEMENTS: ZVideoGenerator.entitlements
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_IDENTITY: "-"

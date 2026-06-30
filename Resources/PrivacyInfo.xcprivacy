@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+		App Store privacy manifest (required for submission).
+
+		Z Video Generator does not track the user and collects no data for the
+		developer. The only data that leaves the Mac is what the user explicitly
+		asks Z.AI to render (prompts, optional image URLs), sent directly to the
+		Z.AI API using the user's own key. That is disclosed to users in-app and in
+		the App Store Connect "App Privacy" details; it is not developer
+		collection or tracking, so this manifest declares none.
+
+		The app uses UserDefaults (a Required Reason API) only for its own
+		preference values (default model/aspect/resolution/etc. on this device),
+		declared below. No other Required Reason APIs (file-timestamp,
+		system-boot-time, disk-space, active-keyboard, or mach-absolute-time) are
+		used, so no other entries are listed.
+	-->
+	<key>NSPrivacyTracking</key>
+	<false/>
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array/>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>CA92.1</string>
+				<string>C56D.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

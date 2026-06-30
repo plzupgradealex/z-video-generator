@@ -1,0 +1,27 @@
+# Xcode / build artifacts
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# Regenerated from project.yml — keep project.yml as source of truth
+# (ZVideoGenerator.xcodeproj is checked in for Xcode convenience but can be
+#  recreated any time with `xcodegen generate`.)
+
+# macOS
+.DS_Store
+
+# Secrets — never commit App Store Connect creds or keys
+Scripts/env.local
+*.p8
+AuthKey_*.p8
+private_keys/
+
+# App Store submission notes (maintainer-only / account-specific)
+docs/
+MAS_SUBMISSION.md
+
+# distributable artifacts
+*.dmg
+*.pkg
